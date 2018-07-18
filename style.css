@@ -1,0 +1,119 @@
+/* global */
+
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	background-color: #c4cfd3;
+	margin: 0;
+	padding: 0;
+}
+
+.container {
+	display: grid;
+	grid-template-columns: repeat(12, 1fr);
+	grid-template-areas:
+	"hd hd hd hd hd hd hd hd hd hd hd hd"
+	"in in in in in in in in in in in in"
+	". mi mi mi mi mi ve ve ve ve ve  ."
+	"ft ft ft ft ft ft ft ft ft ft ft ft";
+
+}
+
+@media screen and (max-width: 600px) {
+	
+	.container {
+		
+		grid-template-areas:
+		"hd hd hd hd hd hd hd hd hd hd hd hd"
+		"in in in in in in in in in in in in"
+		"ve ve ve ve ve ve ve ve ve ve ve ve"
+		"mi mi mi mi mi mi mi mi mi mi mi mi"
+		"ft ft ft ft ft ft ft ft ft ft ft ft";
+	}
+}
+
+
+
+/* header */
+
+.header {
+	grid-area: hd;
+	text-transform: uppercase;
+	text-align: center;
+	color: #205299;
+}
+
+/* intro */
+
+.intro {
+	grid-area: in;
+	background-image: url("images/buzz.jpeg");
+	background-size: 1300px;
+	height: 300px;
+	color: #c4cfd3;
+	text-align: center;
+	font-size: 2em;
+	padding-left: 30px;
+	padding-right: 30px;
+	padding-top: 40px;
+	border: 1px solid #000000;
+}
+
+@media screen and (max-width: 700px) {
+	
+	.intro {
+		font-size: 1.7em;
+		padding-top: 50px;
+		background-position: top left -300px;
+		
+		
+	}
+}
+
+/* missions */
+
+.missions {
+	grid-area: mi;
+	color: #205299;
+	text-align: center;
+	padding-top: 20px;
+}
+
+.missions ul {
+	list-style: none;
+	font-size: 2em;
+	line-height: 120px;
+}
+
+.missions ul li {
+	font-weight: bold;
+}
+
+/* vehicles */
+
+.vehicles {
+	grid-area: ve;
+	color: #205299;
+	text-align: center;
+	padding-top: 20px;
+}
+
+.box {
+	margin-bottom: 40px;
+}
+
+.box h3 {
+	font-weight: bolder;
+}
+
+.box img {
+	width: 250px;
+	border: 1px solid #000000;
+}
+
+/* footer */
+
+.footer {
+	grid-area: ft;
+	color: #205299;
+	text-align: center;
+}
